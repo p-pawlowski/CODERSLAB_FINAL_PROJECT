@@ -31,14 +31,13 @@
 				<h2 align="center">
 				<form:textarea path="subject"  cssClass="subject" />
 				</h2>
-				<div class="objectives">
-					
+				<div class="objectives">					
 						<h3>Cele lekcji:
 						<button class="btn addButton">Dodaj</span></button></h3>
 					<p><b>Uczeń:</b></p>
 					<ul>
 						<c:forEach items="${conspectus.objectives}" var="objective">
-							<li class="li1"><form:textarea path="objectives" value="${objective}" />
+							<li class="li1"><textarea id="objectives" name="objectives" type="text">${objective}</textarea>
 								<button class="btn delButton">Usuń</span></button></li>
 						</c:forEach>
 					</ul>
@@ -50,7 +49,7 @@
 					</p>
 					<ul>
 						<c:forEach items="${conspectus.materials}" var="material">
-							<li class="li1"><form:textarea path="objectives" value="${material}" />
+							<li class="li1"><textarea id="materials" name="materials" type="text">${material}</textarea>
 								<button class="btn delButton">Usuń</button></li>
 						</c:forEach>
 					</ul>
@@ -61,8 +60,8 @@
 						<button class="btn addButton">Dodaj</button>
 					</h3>
 					<ul>
-						<c:forEach items="${conspectus.methods}" var="methods">
-							<li class="li1" ><form:textarea path="methods" value="${methods}" />
+						<c:forEach items="${conspectus.methods}" var="method">
+							<li class="li1" ><textarea id="methods" name="methods" type="text">${method}</textarea>
 								<button class="btn delButton">Usuń</button></li>
 						</c:forEach>
 					</ul>
@@ -77,8 +76,7 @@
 														<ul>
 								<c:forEach items="${conspectus.scenarioIntroduction}"
 									var="scenarioIntroduction">
-									<li><form:textarea path="scenarioIntroduction"
-											value="${scenarioIntroduction}" />
+									<li><textarea id="scenarioIntroduction" name="scenarioIntroduction" type="text">${scenarioIntroduction}</textarea>
 										<button class="btn delButton">Usuń</button></li>
 								</c:forEach>
 							</ul>
@@ -92,8 +90,7 @@
 							</h4>
 							<ul>
 								<c:forEach items="${conspectus.scenarioMain}" var="scenarioMain">
-									<li><form:textarea path="scenarioMain"
-											value="${scenarioMain}" />
+									<li><textarea id="scenarioMain" name="scenarioMain" type="text">${scenarioMain}</textarea>
 										<button class="btn delButton">Usuń</button></li>
 								</c:forEach>
 							</ul>
@@ -108,17 +105,13 @@
 							<ul>
 								<c:forEach items="${conspectus.scenarioSummary}"
 									var="scenarioSummary">
-									<li><form:textarea path="scenarioSummary"
-											value="${scenarioSummary}" />
+									<li><textarea id="scenarioSummary" name="scenarioSummary" type="text">${scenarioSummary}</textarea>
 										<button class="btn delButton">Usuń</button></li>
 								</c:forEach>
 							</ul>
 					</div>
 					</li>
 				</ol>
-				<h3>Notatki:</h3>
-				<form:textarea path="notes" />
-				<br>
 				 <button type="submit" class="btn btn-default">Zapisz</button>
 
 			</form:form>

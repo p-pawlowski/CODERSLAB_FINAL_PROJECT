@@ -78,10 +78,6 @@
 			</li>
 		</ol>
 
-		<h3>Notatki:</h3>
-		<p>
-		${conspectus.notes }
-		</p>
 		</div>
 
 
