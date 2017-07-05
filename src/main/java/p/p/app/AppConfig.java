@@ -21,9 +21,11 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.LocaleContextResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
 
 @Configuration
 @EnableWebMvc
@@ -74,5 +76,11 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		messageSource.setBasename("messages");
 		return messageSource;
 	}
-
+	
+	@Override
+	public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+	registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	}
+	
+	
 }

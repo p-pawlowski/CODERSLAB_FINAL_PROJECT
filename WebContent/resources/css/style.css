@@ -1,0 +1,28 @@
+textarea {
+ vertical-align: middle;
+ width:75%;
+}
+
+h1, h2 {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.subject{
+	text-align:center;
+	width: 100%
+}
+
+.li1:before {
+  content:"\2714\0020";
+}
+.li1{
+	list-style:none;
+}
+
+.li2 {
+    list-style-type: square;
+}
+li {
+	margin: 3px 0;
+}

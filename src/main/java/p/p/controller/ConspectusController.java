@@ -1,0 +1,58 @@
+package p.p.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import p.p.entity.Conspectus;
+
+import p.p.repository.ConspectusRepository;
+
+
+@RequestMapping("/conspectus")
+@Controller
+public class ConspectusController {
+	
+	@Autowired
+	ConspectusRepository conspectusRepository;
+	
+	@RequestMapping(path="/add", method = RequestMethod.GET)
+	public String addConspectusForm(Model model){
+		model.addAttribute("conspectus", new Conspectus());
+		return "ConspectusForm";
+	}
+	
+	@RequestMapping(path="/add", method = RequestMethod.POST)
+	public String processAddConspectusForm(@ModelAttribute Conspectus conspectus){
+		conspectusRepository.save(conspectus);
+		return "redirect:" + conspectus.getId();
+	}
+	
+	@RequestMapping(path="/{id}", method = RequestMethod.GET)
+	public String getConspectus (@PathVariable long id, Model model){
+		Conspectus conspectus = conspectusRepository.findOne(id);
+		model.addAttribute("conspectus", conspectus);
+		return "Conspectus";
+	}
+	
+	@RequestMapping(path = "edit/{id}", method = RequestMethod.GET)
+	public String editConspectus(@PathVariable long id, Model model){
+		model.addAttribute("conspectus", conspectusRepository.findOne(id));	
+		return "ConspectusForm";
+	}
+	
+	@RequestMapping(path = "edit/{id}", method = RequestMethod.POST)
+	public String editConspectus(@ModelAttribute Conspectus conspectus){
+		conspectusRepository.save(conspectus);
+		return "redirect:../" + conspectus.getId();
+	}
+	
+	
+
+}
