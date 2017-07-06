@@ -16,74 +16,108 @@
 	integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	crossorigin="anonymous">
 
-
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
 </head>
 <body>
+
+
+
+	<%@include file="../header.jspf"%>
+	<%@include file="../TopNavBar.jspf"%>
 	<div class="container">
-	<div class="test">
+		<div class="row">
 
-		
-		<h2>${conspectus.subject}</h2>
-		<h3>Cele lekcji:</h3>
-		<ul>
-			<c:forEach var="item" items="${conspectus.objectives }">
-				<li class="li1" >${item}</li>
-			</c:forEach>
-		</ul>
-		<h3>Materiały:</h3>
-		<ul>
-			<c:forEach var="item" items="${conspectus.materials}">
-				<li class="li1">${item}</li>
-			</c:forEach>
-		</ul>
 
-		<h3>Metody:</h3>
-		<ul>
-			<c:forEach var="item" items="${conspectus.methods}">
-				<li class="li1">${item}</li>
-			</c:forEach>
-		</ul>
+			<div class="col-lg-11 col-md-10 col-sm-9 col-xs-8">
 
-		<h3>Przebieg lekcji:</h3>
 
-		<ol>
-			<li >
-				<h4>Wstęp:</h4>
+				<h2>Temat: ${conspectus.subject}</h2>
+				<h3>Cele lekcji:</h3>
+				<p>
+					<b>Uczeń:</b>
+				</p>
 				<ul>
-					<c:forEach var="item" items="${conspectus.scenarioIntroduction}">
-						<li class="li2">${item}</li>
+					<c:forEach var="item" items="${conspectus.objectives }">
+						<li class="li1">${item}</li>
 					</c:forEach>
 				</ul>
-			</li>
-
-			<li >
-				<h4>Część właściwa:</h4>
+				<h3>Materiały:</h3>
 				<ul>
-					<c:forEach var="item" items="${conspectus.scenarioMain}">
-						<li class="li2">${item}</li>
+					<c:forEach var="item" items="${conspectus.materials}">
+						<li class="li1">${item}</li>
 					</c:forEach>
 				</ul>
-			</li>
-			<li>
-				<h4>Podsumowanie:</h4>
+
+				<h3>Metody:</h3>
 				<ul>
-					<c:forEach var="item" items="${conspectus.scenarioSummary}">
-						<li class="li2">${item}</li>
+					<c:forEach var="item" items="${conspectus.methods}">
+						<li class="li1">${item}</li>
 					</c:forEach>
 				</ul>
-			</li>
-		</ol>
 
+				<h3>Przebieg lekcji:</h3>
+
+				<ol>
+					<li>
+						<h4>Wstęp:</h4>
+						<ul>
+							<c:forEach var="item" items="${conspectus.scenarioIntroduction}">
+								<li class="li2">${item}</li>
+							</c:forEach>
+						</ul>
+					</li>
+
+					<li>
+						<h4>Część właściwa:</h4>
+						<ul>
+							<c:forEach var="item" items="${conspectus.scenarioMain}">
+								<li class="li2">${item}</li>
+							</c:forEach>
+						</ul>
+					</li>
+					<li>
+						<h4>Podsumowanie:</h4>
+						<ul>
+							<c:forEach var="item" items="${conspectus.scenarioSummary}">
+								<li class="li2">${item}</li>
+							</c:forEach>
+						</ul>
+					</li>
+				</ol>
+
+			</div>
+			<div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
+				<div class="icon-bar">
+					<br> <br>
+					<p>
+						<a class="active a1" href="#"><i
+							class="fa fa-2x fa-file-pdf-o"></i>PDF</a>
+					</p>
+					<p>
+
+						<a class="a1" href="../conspectus/edit/${conspectus.getId()}"><i
+							class="fa fa-2x fa-pencil-square-o"></i>Edit</a>
+					</p>
+					<p>
+						<a class="a1" href="../conspectus/delete/${conspectus.getId()}"><i
+							class="fa fa-2x fa-trash"></i>Delete</a>
+					</p>
+				</div>
+			</div>
 		</div>
-
+	</div>
 
 	</div>
 
+	</div>
+	<div class="space1"></div>
 
+	<%@include file="../footer.jspf"%>
 </body>
 <script
 	src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />"></script>

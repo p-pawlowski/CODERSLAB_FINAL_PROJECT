@@ -1,5 +1,7 @@
 package p.p.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +27,18 @@ public class ConspectusController {
 	@RequestMapping(path="/add", method = RequestMethod.GET)
 	public String addConspectusForm(Model model){
 		model.addAttribute("conspectus", new Conspectus());
+		
+		//not the best solution
+		List<Conspectus> list = conspectusRepository.findAll();
+		model.addAttribute("list", list);
+		
 		return "ConspectusForm";
 	}
 	
 	@RequestMapping(path="/add", method = RequestMethod.POST)
 	public String processAddConspectusForm(@ModelAttribute Conspectus conspectus){
 		conspectusRepository.save(conspectus);
+			
 		return "redirect:" + conspectus.getId();
 	}
 	
@@ -38,12 +46,22 @@ public class ConspectusController {
 	public String getConspectus (@PathVariable long id, Model model){
 		Conspectus conspectus = conspectusRepository.findOne(id);
 		model.addAttribute("conspectus", conspectus);
+		
+		//not the best solution
+				List<Conspectus> list = conspectusRepository.findAll();
+				model.addAttribute("list", list);
+				
 		return "Conspectus";
 	}
 	
 	@RequestMapping(path = "edit/{id}", method = RequestMethod.GET)
 	public String editConspectus(@PathVariable long id, Model model){
-		model.addAttribute("conspectus", conspectusRepository.findOne(id));	
+		model.addAttribute("conspectus", conspectusRepository.findOne(id));
+		
+		//not the best solution
+				List<Conspectus> list = conspectusRepository.findAll();
+				model.addAttribute("list", list);
+		
 		return "ConspectusForm";
 	}
 	
@@ -53,6 +71,34 @@ public class ConspectusController {
 		return "redirect:../" + conspectus.getId();
 	}
 	
+	@RequestMapping(path = "delete/{id}", method = RequestMethod.GET)
+	public String deleteConspectus(@PathVariable long id){
+		Conspectus conspectus = conspectusRepository.findOne(id);
+		conspectusRepository.delete(conspectus);
+		return "redirect:../MainPage";
+	}
+	
+	@RequestMapping(path = "main")
+	public String mainPage(Model model){
+		
+		//not the best solution
+		List<Conspectus> list = conspectusRepository.findAll();
+		model.addAttribute("list", list);
+		
+		return "MainPage";
+		
+	}
+	
+	@RequestMapping(path = "movies/{id}")
+	public String moviesPage(@PathVariable long id, Model model){
+		model.addAttribute("conspectus", conspectusRepository.findOne(id));
+		//not the best solution
+		List<Conspectus> list = conspectusRepository.findAll();
+		model.addAttribute("list", list);
+		
+		return "movies";
+		
+	}
 	
 
 }

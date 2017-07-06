@@ -18,6 +18,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Cascade;
@@ -36,31 +37,37 @@ public class Conspectus {
 	private Long id;
 
 	@NotBlank
-	private String subject = "Temat: ";
+	private String subject ="Temat: ";
 	
 	@ElementCollection
 	@Column(length=10000)
+	@OrderColumn
 	private List<String> objectives = new ArrayList<>();
 	
 
 	@ElementCollection
 	@Column(length=10000)
+	@OrderColumn
 	private List<String> materials = new ArrayList<>();
 	
 	@ElementCollection
 	@Column(length=10000)
+	@OrderColumn
 	private List<String> methods = new ArrayList<>();
 	
 	@ElementCollection
 	@Column(length=10000)
+	@OrderColumn
 	private List<String> scenarioIntroduction = new ArrayList<>();
 	
 	@ElementCollection
 	@Column(length=10000)
+	@OrderColumn
 	private List<String> scenarioMain = new ArrayList<>();
 	
 	@ElementCollection
 	@Column(length=10000)
+	@OrderColumn
 	private List<String> scenarioSummary = new ArrayList<>();
 	
 	private String notes;
