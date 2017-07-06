@@ -28,7 +28,7 @@
 
 
 	<%@include file="../header.jspf"%>
-	<%@include file="../TopNavBar.jspf"%>
+	<%@include file="../TopNavBar3_movies.jspf"%>
 	<div class="container">
 
 		<h1>Pomoce naukowe</h1>

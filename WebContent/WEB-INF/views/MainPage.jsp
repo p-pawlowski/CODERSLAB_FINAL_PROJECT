@@ -31,20 +31,47 @@
 	<%@include file="../TopNavBar2.jspf"%>
 	<div class="container">
 		<div class="row">
-
-
 			<div class="col-lg-11 col-md-10 col-sm-9 col-xs-8">
 
 				<h1>Strona główna</h1>
 				<h2>System zarządzania konspektami lekcji fizyki</h2>
-				
+
 				<br>
-				
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper ligula id luctus dapibus. Donec libero nibh, porttitor ut nunc quis, tempor imperdiet dolor. Ut et luctus sapien, eget egestas mi. Ut vitae ornare dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus vehicula orci a gravida varius. Aenean ut lacus id magna euismod eleifend. Donec nisi erat, condimentum id pharetra non, porta sit amet quam. Integer vel ante urna. Cras at arcu at velit tempor interdum a pharetra tellus. Aliquam erat volutpat.
-</p>
-<p>
-Fusce pharetra lectus laoreet ante gravida commodo. Etiam semper et nulla condimentum hendrerit. Praesent imperdiet egestas maximus. Mauris venenatis tincidunt lacus non ullamcorper. Pellentesque pellentesque, eros sit amet ullamcorper tincidunt, nunc augue suscipit odio, vel vestibulum quam massa non lorem. Praesent volutpat dignissim lorem et laoreet. Nunc porttitor justo leo, efficitur porta augue mattis sit amet. Nam interdum imperdiet consectetur. Sed eget turpis et risus sollicitudin consectetur.
-</p>
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Nullam semper ligula id luctus dapibus. Donec libero nibh,
+					porttitor ut nunc quis, tempor imperdiet dolor. Ut et luctus
+					sapien, eget egestas mi. Ut vitae ornare dui. Interdum et malesuada
+					fames ac ante ipsum primis in faucibus. Vivamus vehicula orci a
+					gravida varius. Aenean ut lacus id magna euismod eleifend. Donec
+					nisi erat, condimentum id pharetra non, porta sit amet quam.
+					Integer vel ante urna. Cras at arcu at velit tempor interdum a
+					pharetra tellus. Aliquam erat volutpat.</p>
+				<p>Fusce pharetra lectus laoreet ante gravida commodo. Etiam
+					semper et nulla condimentum hendrerit. Praesent imperdiet egestas
+					maximus. Mauris venenatis tincidunt lacus non ullamcorper.
+					Pellentesque pellentesque, eros sit amet ullamcorper tincidunt,
+					nunc augue suscipit odio, vel vestibulum quam massa non lorem.
+					Praesent volutpat dignissim lorem et laoreet. Nunc porttitor justo
+					leo, efficitur porta augue mattis sit amet. Nam interdum imperdiet
+					consectetur. Sed eget turpis et risus sollicitudin consectetur.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					Nullam semper ligula id luctus dapibus. Donec libero nibh,
+					porttitor ut nunc quis, tempor imperdiet dolor. Ut et luctus
+					sapien, eget egestas mi. Ut vitae ornare dui. Interdum et malesuada
+					fames ac ante ipsum primis in faucibus. Vivamus vehicula orci a
+					gravida varius. Aenean ut lacus id magna euismod eleifend. Donec
+					nisi erat, condimentum id pharetra non, porta sit amet quam.
+					Integer vel ante urna. Cras at arcu at velit tempor interdum a
+					pharetra tellus. Aliquam erat volutpat.</p>
+				<p>Fusce pharetra lectus laoreet ante gravida commodo. Etiam
+					semper et nulla condimentum hendrerit. Praesent imperdiet egestas
+					maximus. Mauris venenatis tincidunt lacus non ullamcorper.
+					Pellentesque pellentesque, eros sit amet ullamcorper tincidunt,
+					nunc augue suscipit odio, vel vestibulum quam massa non lorem.
+					Praesent volutpat dignissim lorem et laoreet. Nunc porttitor justo
+					leo, efficitur porta augue mattis sit amet. Nam interdum imperdiet
+					consectetur. Sed eget turpis et risus sollicitudin consectetur.</p>
 			</div>
 
 		</div>

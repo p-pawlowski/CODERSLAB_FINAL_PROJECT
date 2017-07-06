@@ -75,7 +75,7 @@ public class ConspectusController {
 	public String deleteConspectus(@PathVariable long id){
 		Conspectus conspectus = conspectusRepository.findOne(id);
 		conspectusRepository.delete(conspectus);
-		return "redirect:../MainPage";
+		return "redirect:../main";
 	}
 	
 	@RequestMapping(path = "main")

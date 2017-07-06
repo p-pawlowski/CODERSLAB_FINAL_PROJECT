@@ -12,17 +12,17 @@
 			<a class="navbar-brand dropdown-toggle" data-toggle="dropdown"
 				href="#">Scenariusze <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-			<li><a href="../conspectus/add"><b><i class="fa fa-file-text-o" aria-hidden="true"></i> Dodaj nowy</b></a></li>
+			<li><a href="../add"><b><i class="fa fa-file-text-o" aria-hidden="true"></i> Dodaj nowy</b></a></li>
 			<c:forEach items="${list}" var="item">
-					<li><a href="../conspectus/${item.getId()}"><b>${item.getSubject() }</b></a></li>			
+					<li><a href="../${item.getId()}"><b>${item.getSubject() }</b></a></li>			
 			</c:forEach>
 			</ul>
-			<a class=" navbar-brand" href="../conspectus/main">Strona główna</a>
+			<a class=" navbar-brand" href="../main">Strona główna</a>
 		</div>
 		<ul class="nav navbar-nav navbar-center">
-			<li><a href="../conspectus/${conspectus.getId()}">Konspet lekcji</a></li>
+			<li><a href="../${conspectus.getId()}">Konspet lekcji</a></li>
 			<li><a href="#">Zadania domowe</a></li>
-			<li><a href="../conspectus/movies/${conspectus.getId()}">Filmy/Linki</a></li>
+			<li><a href="../movies/${conspectus.getId()}">Filmy/Linki</a></li>
 		</ul>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
