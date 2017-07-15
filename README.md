@@ -18,4 +18,3 @@ W rozwoju:
 -dodawanie usuwanie zadań domowych
 -dodawanie usuwanie filmow/linkow
 
-
