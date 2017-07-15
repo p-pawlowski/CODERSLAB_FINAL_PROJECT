@@ -27,7 +27,7 @@
 </head>
 <body>
 <%@include file="../header.jspf" %>
-<%@include file="../TopNavBar.jspf" %>
+<%@include file="../TopNavBar2.jspf" %>
 	<div class="container">
 	
 		

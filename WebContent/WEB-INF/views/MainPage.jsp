@@ -31,7 +31,7 @@
 	<%@include file="../TopNavBar2.jspf"%>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-11 col-md-10 col-sm-9 col-xs-8">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 				<h1>Strona główna</h1>
 				<h2>System zarządzania konspektami lekcji fizyki</h2>
