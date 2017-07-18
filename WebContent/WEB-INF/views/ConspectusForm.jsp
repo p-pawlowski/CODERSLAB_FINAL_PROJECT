@@ -30,8 +30,7 @@
 <%@include file="../TopNavBar2.jspf" %>
 	<div class="container">
 	
-		
-
+	
 		<div class="col">
 			<div class="test">
 				<div class="form-group">

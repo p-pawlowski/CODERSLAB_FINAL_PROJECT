@@ -11,11 +11,8 @@
 			</button>
 			<a class="navbar-brand dropdown-toggle" data-toggle="dropdown"
 				href="#">Scenariusze <span class="caret"></span></a>
-			<ul class="dropdown-menu">
+			<ul class="dropdown-menu" id="getAll">
 			<li><a href="../add"><b><i class="fa fa-file-text-o" aria-hidden="true"></i> Dodaj nowy</b></a></li>
-			<c:forEach items="${list}" var="item">
-					<li><a href="../${item.getId()}"><b>${item.getSubject() }</b></a></li>			
-			</c:forEach>
 			</ul>
 			<a class=" navbar-brand" href="../main">Strona główna</a>
 		</div>
@@ -35,3 +32,7 @@
 	</div>
 </nav>
 
+<script
+	src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />"></script>
+<script src="<c:url value="/resources/js/appNavbar.js" />"
+	type="text/javascript"></script>
