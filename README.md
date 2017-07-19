@@ -1,4 +1,4 @@
-KNOWLEDGE MENAGEMENT SYSTEM
+KNOWLEDGE MANAGEMENT SYSTEM
 
 Aplikacja umożliwiająca tworzenie i zarządzanie scenariuszami lekcji Fizyki, oraz gromadzeniem materiałów dodatkowych. Formularz dodawania i 
 edycji scenariusza binduje i zapisuje listy elementów, które moga być dynamicznie dodawane i usuwane.
