@@ -104,24 +104,51 @@
 							class="fa fa-2x fa-pencil-square-o"></i>Edit</a>
 					</p>
 					<p>
-						<a class="a1" href="../conspectus/delete/${conspectus.getId()}"><i
+						<a class="a1" data-toggle="modal" data-target="#myModal" href="#"><i
 							class="fa fa-2x fa-trash"></i>Delete</a>
 					</p>
+
+					<!-- Modal -->
+					<div class="modal fade" id="myModal" role="dialog">
+						<div class="modal-dialog">
+
+							<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title text-center">Czy potwierdzasz
+										usunięcie scenariusza?</h4>
+									<br>
+									<div class="text-center">
+										<form class="inline" action="../conspectus/delete/${conspectus.getId()}">
+											<button class="btn">TAK</button>
+											<button class="btn" data-dismiss="modal">NIE</button>
+										</form>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
 				</div>
+
+
 			</div>
 		</div>
 	</div>
 
-	</div>
 
-	</div>
+
 	<div class="space1"></div>
 
 	<%@include file="../footer.jspf"%>
 </body>
 <script
 	src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />"></script>
-<script src="<c:url value="/resources/js/app.js" />"
+<script src="<c:url value="/resources/js/appConspectus.js" />"
 	type="text/javascript"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
