@@ -32,7 +32,7 @@
 		
 		<ul class="nav navbar-nav navbar-center">
 			<li><a href="../conspectus/${conspectus.getId()}">Konspet lekcji</a></li>
-			<li><a href="#">Zadania domowe</a></li>
+			<li><a href="../homework/${conspectus.getId()}">Zadania domowe</a></li>
 			<li><a href="../movies/${conspectus.getId()}">Filmy/Linki</a></li>
 		</ul>
 		<div class="collapse navbar-collapse" id="myNavbar">
