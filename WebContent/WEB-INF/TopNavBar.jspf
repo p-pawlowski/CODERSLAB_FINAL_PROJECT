@@ -3,6 +3,11 @@
 
 
 
+
+			
+
+
+
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -11,17 +16,24 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand dropdown-toggle" data-toggle="dropdown"
+			
+			<a class=" navbar-brand" href="../conspectus/main">Strona główna</a>
+		</div>
+		
+		<ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a class="dropdown-toggle"  data-toggle="dropdown"
 				href="#">Scenariusze <span class="caret"></span></a>
 			<ul class="dropdown-menu" id="getAll">
 			<li><a href="../conspectus/add"><b><i class="fa fa-file-text-o" aria-hidden="true"></i> Dodaj nowy</b></a></li>
 			</ul>
-			<a class=" navbar-brand" href="../conspectus/main">Strona główna</a>
-		</div>
+      </li>
+    </ul>
+		
 		<ul class="nav navbar-nav navbar-center">
 			<li><a href="../conspectus/${conspectus.getId()}">Konspet lekcji</a></li>
 			<li><a href="#">Zadania domowe</a></li>
-			<li><a href="../conspectus/movies/${conspectus.getId()}">Filmy/Linki</a></li>
+			<li><a href="../movies/${conspectus.getId()}">Filmy/Linki</a></li>
 		</ul>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
@@ -32,7 +44,10 @@
 			</ul>
 		</div>
 	</div>
+	
 </nav>
+
+
 
 <script
 	src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />"></script>

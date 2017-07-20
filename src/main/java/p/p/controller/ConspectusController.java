@@ -70,13 +70,13 @@ public class ConspectusController {
 		
 	}
 	
-	@RequestMapping(path = "movies/{id}")
-	public String moviesPage(@PathVariable long id, Model model){
-		model.addAttribute("conspectus", conspectusRepository.findOne(id));
-		
-		return "movies";
-		
-	}
+//	@RequestMapping(path = "/movies/{id}")
+//	public String moviesPage(@PathVariable long id, Model model){
+//		model.addAttribute("conspectus", conspectusRepository.findOne(id));
+//		
+//		return "movies";
+//		
+//	}
 	
 
 }
