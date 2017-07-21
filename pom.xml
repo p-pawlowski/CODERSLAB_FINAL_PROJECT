@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>pl.coderslab</groupId>
-	<artifactId>FINAL_PROJECT</artifactId>
+	<artifactId>KnowlegdeManagementSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>FINAL_PROJECT</name>
+	<name>KnowlegdeManagementSystem</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
