@@ -47,7 +47,7 @@ public class ConspectusController {
 	public String editConspectus(@PathVariable long id, Model model){
 		model.addAttribute("conspectus", conspectusRepository.findOne(id));
 		
-		return "ConspectusForm";
+		return "ConspectusFormEdit";
 	}
 	
 	@RequestMapping(path = "edit/{id}", method = RequestMethod.POST)
