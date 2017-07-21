@@ -7,7 +7,7 @@ $(document).ready(function() {
    * POBIERANIE I WYSWIETLANIE KSIAZEK Z BAZY
    */
   function getBooks() {
-    var url = "http://localhost:8080/KnowlegdeManagementSystem/conspectus/main";
+    var url = "/KnowlegdeManagementSystem/rest/all";
     ajaxCaller(url, getCallBack);
   }
 
