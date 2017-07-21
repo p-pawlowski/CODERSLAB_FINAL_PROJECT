@@ -9,7 +9,7 @@
 				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 			</button>
-			<a class=" navbar-brand" href="../conspectus/main">Strona główna</a>
+			<a class=" navbar-brand" href="/KnowlegdeManagementSystem/conspectus/main">Strona główna</a>
 		</div>
 
 
@@ -17,7 +17,7 @@
 			<li class="dropdown"><a class="dropdown-toggle"
 				data-toggle="dropdown" href="#">Scenariusze <span class="caret"></span></a>
 				<ul class="dropdown-menu" id="getAll">
-					<li><a href="../conspectus/add"><b><i
+					<li><a href="/KnowlegdeManagementSystem/conspectus/add"><b><i
 								class="fa fa-file-text-o" aria-hidden="true"></i> Dodaj nowy</b></a></li>
 				</ul></li>
 		</ul>
