@@ -13,51 +13,49 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-
 @Entity
 @Table(name = "conspectus")
 public class Conspectus {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotBlank
-	private String subject ="Temat: ";
-	
-	@ElementCollection
-	@Column(length=10000)
-	@OrderColumn
-	private List<String> objectives = new ArrayList<>();
-	
+	private String subject = "Temat: ";
 
 	@ElementCollection
-	@Column(length=10000)
+	@Column(length = 10000)
+	@OrderColumn
+	private List<String> objectives = new ArrayList<>();
+
+	@ElementCollection
+	@Column(length = 10000)
 	@OrderColumn
 	private List<String> materials = new ArrayList<>();
-	
+
 	@ElementCollection
-	@Column(length=10000)
+	@Column(length = 10000)
 	@OrderColumn
 	private List<String> methods = new ArrayList<>();
-	
+
 	@ElementCollection
-	@Column(length=10000)
+	@Column(length = 10000)
 	@OrderColumn
 	private List<String> scenarioIntroduction = new ArrayList<>();
-	
+
 	@ElementCollection
-	@Column(length=10000)
+	@Column(length = 10000)
 	@OrderColumn
 	private List<String> scenarioMain = new ArrayList<>();
-	
+
 	@ElementCollection
-	@Column(length=10000)
+	@Column(length = 10000)
 	@OrderColumn
 	private List<String> scenarioSummary = new ArrayList<>();
-	
+
 	private String notes;
-	
+
 	private Integer time;
 
 	public Long getId() {
@@ -140,9 +138,4 @@ public class Conspectus {
 		this.time = time;
 	}
 
-	
-	
-	
-	
-	
 }

@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import p.p.entity.Conspectus;
 
-
 @Repository
 public interface ConspectusRepository extends JpaRepository<Conspectus, Long> {
 

@@ -13,14 +13,13 @@ import p.p.repository.ConspectusRepository;
 public class MoviesController {
 	@Autowired
 	ConspectusRepository conspectusRepository;
-	
 
 	@RequestMapping(path = "/{id}")
-	public String moviesPage(@PathVariable long id, Model model){
+	public String moviesPage(@PathVariable long id, Model model) {
 		model.addAttribute("conspectus", conspectusRepository.findOne(id));
-		
+
 		return "movies";
-		
+
 	}
-	
+
 }
