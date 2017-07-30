@@ -12,8 +12,13 @@ import p.p.repository.ConspectusRepository;
 @Controller
 public class HomeworkController {
 
-	@Autowired
+	
 	ConspectusRepository conspectusRepository;
+	
+	@Autowired
+	public HomeworkController(ConspectusRepository conspectusRepository) {
+		this.conspectusRepository = conspectusRepository;
+	}
 
 	@RequestMapping(path = "/{id}")
 	public String moviesPage(@PathVariable long id, Model model) {

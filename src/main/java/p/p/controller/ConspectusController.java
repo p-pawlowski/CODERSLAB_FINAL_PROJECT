@@ -16,9 +16,13 @@ import p.p.repository.ConspectusRepository;
 @Controller
 public class ConspectusController {
 
-	@Autowired
 	ConspectusRepository conspectusRepository;
-
+	
+	@Autowired
+	public ConspectusController(ConspectusRepository conspectusRepository){
+		this.conspectusRepository = conspectusRepository;
+	}
+	
 	@RequestMapping(path = "/add", method = RequestMethod.GET)
 	public String addConspectusForm(Model model) {
 		model.addAttribute("conspectus", new Conspectus());
