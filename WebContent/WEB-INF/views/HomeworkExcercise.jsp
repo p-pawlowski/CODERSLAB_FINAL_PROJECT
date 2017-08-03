@@ -31,11 +31,30 @@
 
 		<h1>Zadania domowe</h1>
 
+		<br>
+		<h2>Lista zadań</h2>
+		<div id='getAll'></div>
+
+
+		<h2>Dodaj nowe zadanie</h2>
+		<form method="POST">
+			<label>Title</label>
+			<br>
+			<textarea id="title" name="title" type="text" value=""></textarea>
+			<br> <label>Description</label> <br>
+			<textarea id="title" name="title" type="text" value=""></textarea>
+			<br> <input type="submit" value="zapisz"></input>
+		</form>
+
+
+		<div class="space1"></div>
 		<%@include file="../footer.jspf"%>
 </body>
 <script
-	src="<c:url value="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />"></script>
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/resources/js/appHomeworkExcercise.js"
 	type="text/javascript"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
 </html>

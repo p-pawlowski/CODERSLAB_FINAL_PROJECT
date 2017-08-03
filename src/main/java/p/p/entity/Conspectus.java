@@ -60,7 +60,7 @@ public class Conspectus {
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "conspectus", cascade = {CascadeType.REMOVE})
-	private List<Excercise> excercises;
+	private List<HomeworkExcercise> homeworkExcercises;
 
 	public Long getId() {
 		return id;
@@ -126,12 +126,12 @@ public class Conspectus {
 		this.scenarioSummary = scenarioSummary;
 	}
 
-	public List<Excercise> getExcercises() {
-		return excercises;
+	public List<HomeworkExcercise> getHomeworkExcercises() {
+		return homeworkExcercises;
 	}
 
-	public void setExcercises(List<Excercise> excercises) {
-		this.excercises = excercises;
+	public void setExcercises(List<HomeworkExcercise> homeworkExcercises) {
+		this.homeworkExcercises = homeworkExcercises;
 	}
 	
 
