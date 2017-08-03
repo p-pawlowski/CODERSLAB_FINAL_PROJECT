@@ -33,7 +33,7 @@
 
 		<br>
 		<h2>Lista zadań</h2>
-		<div id='getAll'></div>
+		<ul id='getAllHomeworkExcercise'></div>
 
 
 		<h2>Dodaj nowe zadanie</h2>

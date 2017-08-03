@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	  //Wczytanie listy książek zaraz po załadowaniu strony
+	  //Wczytanie listy zadan domowych zaraz po załadowaniu strony
 	  getHomeworExcerciseList();
 
 	  /*
@@ -11,36 +11,17 @@ $(document).ready(function() {
 	    ajaxCaller(url, getCallBack);
 	  }
 
-	  //funkcja callbackowa wyswietlania informacji o ksiazce
-	  function getCallBack(result) {
-	    //czyszczenie starej zawartosci diva
-	    $('#getAll').html('');
-	    for (var i = 0; i < result.length; i++) {
-
-	      var button1 = $('<button>');
-	      button1.text('usuń');
-	      button1.attr('data-id', $(result).eq(i).attr('id'));
-	      button1.addClass('delButton');
-
-	      var divTitle = $('<div>').html(result[i].title + "&nbsp&nbsp");
-	      divTitle.addClass('title');
-	      divTitle.attr('data-id', $(result).eq(i).attr('id'));
-
-	      var divEmpty = $('<div><p>');
-	      divEmpty.addClass('empty');
-	      divEmpty.html('<br>');
-
-	      var newDiv = $('<div>');
-	      newDiv.addClass('book');
-	      newDiv.attr('id', $(result).eq(i).attr('id'));
-	      newDiv.append(divTitle);
-	      newDiv.append(button1);
-	      newDiv.append(divEmpty);
-
-	      //dodawanie nowej zawartosci diva
-	      $('#getAll').append(newDiv);
-	    }
-	  }
+		// funkcja callbackowa wyswietlania informacji o zadaniach domowych
+		function getCallBack(result) {
+			// czyszczenie starej zawartosci diva
+		    $('#getAllHomeworkExcercise').html('');
+		    // wczytywanie listy zadan
+			for (var i = 0; i < result.length; i++) {
+				var newLi = $('<li>').html("<b>" + result[i].title + "</b></a>");
+				// dodawanie nowej zawartosci diva
+				$('#getAllHomeworkExcercise').append(newLi);
+			}
+		}
 	
 	
 	

@@ -12,7 +12,7 @@ $(document).ready(
 				ajaxCaller(url, getCallBack);
 			}
 
-			// funkcja callbackowa wyswietlania informacji o ksiazce
+			// funkcja callbackowa wyswietlania informacji o konspekcie
 			function getCallBack(result) {
 				// czyszczenie starej zawartosci diva
 				for (var i = 0; i < result.length; i++) {

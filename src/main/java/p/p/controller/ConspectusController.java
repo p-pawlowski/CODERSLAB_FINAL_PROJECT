@@ -80,7 +80,7 @@ public class ConspectusController {
 	 * REST
 	 */
 	
-	@GetMapping("/all")
+	@GetMapping("/all")	
 	public @ResponseBody List<Conspectus> getList() {
 		return conspectusRepository.findAll();
 	}
