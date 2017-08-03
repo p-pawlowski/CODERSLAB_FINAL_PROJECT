@@ -2,16 +2,20 @@ package p.p.entity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import javax.persistence.Table;
-
 import org.hibernate.validator.constraints.NotBlank;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Table(name = "conspectus")
@@ -54,9 +58,9 @@ public class Conspectus {
 	@OrderColumn
 	private List<String> scenarioSummary = new ArrayList<>();
 
-	private String notes;
-
-	private Integer time;
+	@JsonIgnore
+	@OneToMany(mappedBy = "conspectus", cascade = {CascadeType.REMOVE})
+	private List<Excercise> excercises;
 
 	public Long getId() {
 		return id;
@@ -122,20 +126,13 @@ public class Conspectus {
 		this.scenarioSummary = scenarioSummary;
 	}
 
-	public String getNotes() {
-		return notes;
+	public List<Excercise> getExcercises() {
+		return excercises;
 	}
 
-	public void setNotes(String notes) {
-		this.notes = notes;
+	public void setExcercises(List<Excercise> excercises) {
+		this.excercises = excercises;
 	}
-
-	public Integer getTime() {
-		return time;
-	}
-
-	public void setTime(Integer time) {
-		this.time = time;
-	}
+	
 
 }
