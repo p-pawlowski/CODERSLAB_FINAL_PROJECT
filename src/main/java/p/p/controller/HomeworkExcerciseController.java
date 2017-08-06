@@ -2,6 +2,8 @@ package p.p.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import p.p.entity.Conspectus;
 import p.p.entity.HomeworkExcercise;
@@ -27,12 +30,14 @@ public class HomeworkExcerciseController {
 	public HomeworkExcerciseController(ConspectusRepository conspectusRepository,
 			HomeworkExcerciseRepository homeworkExcerciseRepository) {
 		this.conspectusRepository = conspectusRepository;
+		this.homeworkExcerciseRepository = homeworkExcerciseRepository;
 	}
 
 	@RequestMapping(path = "/{id}")
-	public String moviesPage(@PathVariable long id, Model model) {
-		model.addAttribute("conspectus", conspectusRepository.findOne(id));
-
+	public String moviesPage(@PathVariable long id, Model model, HttpSession ses) {
+		long conspectusId = (long) ses.getAttribute("conspectusId");
+		model.addAttribute("conspectus", conspectusRepository.findOne(conspectusId));
+		System.out.println(conspectusId);
 		return "HomeworkExcercise";
 
 	}
@@ -43,7 +48,7 @@ public class HomeworkExcerciseController {
 
 	@GetMapping("/all")
 	public @ResponseBody List<HomeworkExcercise> getList() {
-		return homeworkExcerciseRepository.findAll();
+		return homeworkExcerciseRepository.findByConspectusId(4);
 	}
 
 }

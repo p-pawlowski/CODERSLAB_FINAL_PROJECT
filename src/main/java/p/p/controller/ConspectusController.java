@@ -2,6 +2,8 @@ package p.p.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,7 +44,8 @@ public class ConspectusController {
 	}
 
 	@RequestMapping(path = "/{id}", method = RequestMethod.GET)
-	public String getConspectus(@PathVariable long id, Model model) {
+	public String getConspectus(@PathVariable long id, Model model, HttpSession	ses) {
+		ses.setAttribute("conspectusId", id);
 		Conspectus conspectus = conspectusRepository.findOne(id);
 		model.addAttribute("conspectus", conspectus);
 
@@ -69,7 +72,7 @@ public class ConspectusController {
 		return "redirect:../main";
 	}
 
-	@RequestMapping(path = "main")
+	@RequestMapping(path = "main", method = RequestMethod.GET)
 	public String mainPage(Model model) {
 
 		return "MainPage";
