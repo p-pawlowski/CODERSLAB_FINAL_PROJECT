@@ -33,19 +33,21 @@
 
 		<br>
 		<h2>Lista zadań</h2>
-		<ul id='getAllHomeworkExcercise'>
+		<ul id='getAllHomeworkExcercise'></ul>
+		
+				<h2>Dodaj nowe zadanie</h2>
+		<form method="POST">
+			<label>Title</label> <br>
+			<textarea id="title" name="title" type="text" value=""></textarea>
+			<br> <label>Description</label> <br>
+			<textarea id="title" name="title" type="text" value=""></textarea>
+			<br> <input type="submit" value="zapisz"></input>
+		</form>
+		
 	</div>
 
 
-	<h2>Dodaj nowe zadanie</h2>
-	<form method="POST">
-		<label>Title</label> <br>
-		<textarea id="title" name="title" type="text" value=""></textarea>
-		<br> <label>Description</label> <br>
-		<textarea id="title" name="title" type="text" value=""></textarea>
-		<br> <input type="submit" value="zapisz"></input>
-	</form>
-
+	
 
 	<div class="space1"></div>
 	<%@include file="../footer.jspf"%>

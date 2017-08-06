@@ -34,10 +34,8 @@ public class HomeworkExcerciseController {
 	}
 
 	@RequestMapping(path = "/{id}")
-	public String moviesPage(@PathVariable long id, Model model, HttpSession ses) {
-		long conspectusId = (long) ses.getAttribute("conspectusId");
-		model.addAttribute("conspectus", conspectusRepository.findOne(conspectusId));
-		System.out.println(conspectusId);
+	public String moviesPage(@PathVariable long id, Model model) {
+		model.addAttribute("conspectus", conspectusRepository.findOne(id));
 		return "HomeworkExcercise";
 
 	}
@@ -47,8 +45,9 @@ public class HomeworkExcerciseController {
 	 */
 
 	@GetMapping("/all")
-	public @ResponseBody List<HomeworkExcercise> getList() {
-		return homeworkExcerciseRepository.findByConspectusId(4);
+	public @ResponseBody List<HomeworkExcercise> getList(HttpSession ses) {
+		long conspectusId = (long) ses.getAttribute("conspectusId");
+		return homeworkExcerciseRepository.findByConspectusId(conspectusId);
 	}
 
 }
