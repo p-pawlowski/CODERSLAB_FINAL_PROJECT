@@ -40,7 +40,7 @@
 			<label>Title</label> <br>
 			<textarea id="title" name="title" type="text" value=""></textarea>
 			<br> <label>Description</label> <br>
-			<textarea id="title" name="title" type="text" value=""></textarea>
+			<textarea id="description" name="description" type="text" value=""></textarea>
 			<br> <input type="submit" value="zapisz"></input>
 		</form>
 		

@@ -4,7 +4,7 @@ $(document).ready(function() {
 	  getHomeworExcerciseList();
 
 	  /*
-	   * POBIERANIE I WYSWIETLANIE KSIAZEK Z BAZY
+	   * POBIERANIE I WYSWIETLANIE LISTY ZADAŃ DOMOWYCH Z BAZY Z BAZY
 	   */
 	  function getHomeworExcerciseList() {
 	    var url = "http://localhost:8080/KnowlegdeManagementSystem/homework/all";
@@ -22,6 +22,30 @@ $(document).ready(function() {
 				$('#getAllHomeworkExcercise').append(newLi);
 			}
 		}
+		
+		  /*
+		   * EVENT DODAWANIA ZADANIA Z FORMULARZA
+		   */
+		  $('[type="submit"]').on('click', function(event) {
+		    event.preventDefault();
+		    var form = $('form');
+		    var json = {
+		      "title": form.find('textarea[name="title"]').val(),
+		      "description": form.find('textarea[name="description"]').val()
+		    };
+		    url = "http://localhost:8080/KnowlegdeManagementSystem/homework/add";
+		    ajaxCaller(url, addCallBack, 'POST', json);
+
+		  })
+
+		  //add Call Back. czyszczenie formularza i wczytywanie nowej listy ksiazek
+		  function addCallBack(){
+			getHomeworExcerciseList();
+		    $('form').find('textarea[type="text"]').each(function(){
+		    $(this).val('');
+		    });
+		    
+		  }
 	
 	
 	

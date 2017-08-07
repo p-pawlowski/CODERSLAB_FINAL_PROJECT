@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -49,5 +51,13 @@ public class HomeworkExcerciseController {
 		long conspectusId = (long) ses.getAttribute("conspectusId");
 		return homeworkExcerciseRepository.findByConspectusId(conspectusId);
 	}
+	
+	@PostMapping("/add")
+	public @ResponseBody void saveExcercise(@RequestBody HomeworkExcercise homeworkExcercise, HttpSession ses){
+		long conspectusId = (long) ses.getAttribute("conspectusId");
+		homeworkExcercise.setConspectus(conspectusRepository.findOne(conspectusId));
+		homeworkExcerciseRepository.save(homeworkExcercise);
+	}
+	
 
 }
