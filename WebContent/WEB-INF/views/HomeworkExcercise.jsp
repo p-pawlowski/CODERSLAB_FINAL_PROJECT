@@ -37,9 +37,9 @@
 		
 				<h2>Dodaj nowe zadanie</h2>
 		<form method="POST">
-			<label>Title</label> <br>
+			<label>Tytuł zadania</label> <br>
 			<textarea id="title" name="title" type="text" value=""></textarea>
-			<br> <label>Description</label> <br>
+			<br> <label>Treść zadania</label> <br>
 			<textarea id="description" name="description" type="text" value=""></textarea>
 			<br> <input type="submit" value="zapisz"></input>
 		</form>
