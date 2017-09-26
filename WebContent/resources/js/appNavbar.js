@@ -16,8 +16,7 @@ $(document).ready(
 			function getCallBack(result) {
 				// czyszczenie starej zawartosci diva
 				for (var i = 0; i < result.length; i++) {
-
-					var str = "../conspectus/" + result[i].id;
+					var str = "/KnowlegdeManagementSystem/conspectus/" + result[i].id;
 					var newLi = $('<li>').html(
 							"<a href=" + str + ">" + "<b>" + result[i].subject
 									+ "</b></a>");

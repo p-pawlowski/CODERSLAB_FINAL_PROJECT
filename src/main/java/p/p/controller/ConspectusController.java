@@ -55,7 +55,6 @@ public class ConspectusController {
 	@RequestMapping(path = "edit/{id}", method = RequestMethod.GET)
 	public String editConspectus(@PathVariable long id, Model model) {
 		model.addAttribute("conspectus", conspectusRepository.findOne(id));
-
 		return "ConspectusFormEdit";
 	}
 
@@ -69,23 +68,7 @@ public class ConspectusController {
 	public String deleteConspectus(@PathVariable long id) {
 		Conspectus conspectus = conspectusRepository.findOne(id);
 		conspectusRepository.delete(conspectus);
-		return "redirect:../main";
-	}
-
-	@RequestMapping(path = "main", method = RequestMethod.GET)
-	public String mainPage(Model model) {
-
-		return "MainPage";
-
-	}
-	
-	/*
-	 * REST
-	 */
-	
-	@GetMapping("/all")	
-	public @ResponseBody List<Conspectus> getList() {
-		return conspectusRepository.findAll();
+		return "redirect:/";
 	}
 
 }
