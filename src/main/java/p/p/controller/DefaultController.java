@@ -12,5 +12,11 @@ public class DefaultController {
 		return "MainPage";
 
 	}
+	
+	
+	@RequestMapping(value="/access-denied")
+	public String accessDenied(){
+		return "access-denied";
+	}
 
 }

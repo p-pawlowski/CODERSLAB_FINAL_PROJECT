@@ -91,7 +91,7 @@
 						<h3>Przebieg lekcji:</h3>
 						<ol>
 							<div class="scenarioIntroduction">
-								<li>
+								
 									<h4>
 										Wstęp:
 										<button class="btn addButton">Dodaj</button>
@@ -107,7 +107,7 @@
 							</div>
 							<div class="scenarioMain">
 								
-								<li>
+								
 									<h4>
 										Część właściwa:
 										<button class="btn addButton">Dodaj</button>
@@ -123,7 +123,7 @@
 							</div>
 							<div class="scenarioSummary">
 								
-								<li>
+								
 									<h4>
 										Podsumowanie:
 										<button class="btn addButton">Dodaj</button>
@@ -140,7 +140,7 @@
 							
 						</ol>
 						<br>
-						<button type="submit" class="center-block btn btn-lg">&nbsp; <b>Zapisz<b></b> &nbsp;  </button>
+						<button type="submit" class="center-block btn btn-lg">&nbsp; <b>Zapisz</b> &nbsp;  </button>
 
 					</form:form>
 				</div>
