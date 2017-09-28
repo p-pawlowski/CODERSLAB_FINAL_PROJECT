@@ -75,6 +75,7 @@
 			</div>
 
 		</div>
+		</div>
 		<div class="space1"></div>
 
 		<%@include file="../footer.jspf"%>

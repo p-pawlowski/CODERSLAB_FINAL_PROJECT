@@ -61,12 +61,12 @@
 							</ul>
 						</div>
 						<div class="materials">
-							<p>
+							<p></p>
 							<h3>
 								Materiały:
 								<button class="btn addButton">Dodaj</button>
 							</h3>
-							</p>
+							
 							<ul>
 								<c:forEach items="${conspectus.materials}" var="material">
 									<li class="li1"><textarea id="materials" name="materials"
@@ -106,7 +106,7 @@
 									</ul>
 							</div>
 							<div class="scenarioMain">
-								</li>
+								
 								<li>
 									<h4>
 										Część właściwa:
@@ -122,7 +122,7 @@
 									</ul>
 							</div>
 							<div class="scenarioSummary">
-								</li>
+								
 								<li>
 									<h4>
 										Podsumowanie:
@@ -137,7 +137,7 @@
 										</c:forEach>
 									</ul>
 							</div>
-							</li>
+							
 						</ol>
 						<br>
 						<button type="submit" class="center-block btn btn-lg">&nbsp; <b>Zapisz<b></b> &nbsp;  </button>

@@ -44,7 +44,7 @@
 							<h3>
 								Cele lekcji:
 								<button class="btn addButton">
-									Dodaj</span>
+									<span> Dodaj</span>
 								</button>
 							</h3>
 							<p>
@@ -55,18 +55,18 @@
 									<li class="li1"><textarea id="objectives"
 											name="objectives" type="text">${objective}</textarea>
 										<button class="btn delButton">
-											Usuń</span>
+											<span>Usuń</span>
 										</button></li>
 								</c:forEach>
 							</ul>
 						</div>
 						<div class="materials">
-							<p>
+							<p></p>
 							<h3>
 								Materiały:
 								<button class="btn addButton">Dodaj</button>
 							</h3>
-							</p>
+							
 							<ul>
 								<c:forEach items="${conspectus.materials}" var="material">
 									<li class="li1"><textarea id="materials" name="materials"
@@ -91,7 +91,7 @@
 						<h3>Przebieg lekcji:</h3>
 						<ol>
 							<div class="scenarioIntroduction">
-								<li>
+								
 									<h4>
 										Wstęp:
 										<button class="btn addButton">Dodaj</button>
@@ -106,8 +106,7 @@
 									</ul>
 							</div>
 							<div class="scenarioMain">
-								</li>
-								<li>
+								
 									<h4>
 										Część właściwa:
 										<button class="btn addButton">Dodaj</button>
@@ -121,9 +120,9 @@
 										</c:forEach>
 									</ul>
 							</div>
-							<div class="scenarioSummary">
-								</li>
-								<li>
+							<div class="scenarioSummary"></div>
+								
+								
 									<h4>
 										Podsumowanie:
 										<button class="btn addButton">Dodaj</button>
@@ -137,10 +136,10 @@
 										</c:forEach>
 									</ul>
 							</div>
-							</li>
+
 						</ol>
 						<br>
-						<button type="submit" class="center-block btn btn-lg">&nbsp; <b>Zapisz<b></b> &nbsp;  </button>
+						<button type="submit" class="center-block btn btn-lg">&nbsp; <b>Zapisz</b> &nbsp;  </button>
 
 					</form:form>
 				</div>

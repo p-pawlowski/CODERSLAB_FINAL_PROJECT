@@ -43,6 +43,7 @@
 		<h2><iframe width="560" height="315" src="https://www.youtube.com/embed/XLpCEcxX9jc" frameborder="0" allowfullscreen></iframe></h2>
 
 		<div class="space1"></div>
+		</div>
 
 		<%@include file="../footer.jspf"%>
 </body>
