@@ -1,3 +1,8 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@	taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
@@ -11,25 +16,23 @@
 </head>
 
 <body>
-	<form th:action="@{/registration}" method="get">
+	<form action="/KnowlegdeManagementSystem/registration" method="get">
 		<button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>
 	</form>	
 	
 	<div class="container">
-		<form th:action="@{/login}" method="POST" class="form-signin">
-			<h3 class="form-signin-heading" th:text="Welcome"></h3>
+
+		<form  method="POST" name="form-login">
+			<h3 class="form-signin-heading">Welcome</h3>
 			<br/>
 			 
-			<input type="text" id="email" name="email"  th:placeholder="Email"
-				class="form-control" /> <br/> 
-			<input type="password"  th:placeholder="Password"
-				id="password" name="password" class="form-control" /> <br /> 
-				
-			<div align="center" th:if="${param.error}">
-				<p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
-			</div>
-			<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>
+			<input type="text" name="email" id="email"
+				class="form-control" placeholder="email"/><br/> 
+			<input type="password" id="password" placeholder="password"
+				 name="password" class="form-control" /> <br /> 
+			 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+			<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit">Login</button>
 		</form>
-	</div>
+		</div>
 </body>
 </html>

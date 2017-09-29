@@ -8,8 +8,10 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -30,8 +32,19 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableTransactionManagement
 @ComponentScan(basePackages = { "p.p" })
 @EnableJpaRepositories(basePackages ={"p.p.repository"})
+@Import({ SecurityConfiguration.class })
 public class AppConfig extends WebMvcConfigurerAdapter {
 
+	@Bean(name = "dataSource")
+	public DriverManagerDataSource dataSource() {
+	    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+	    driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
+	    driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/CMS");
+	    driverManagerDataSource.setUsername("root");
+	    driverManagerDataSource.setPassword("coderslab");
+	    return driverManagerDataSource;
+	}
+	
 	@Bean
 	public LocalEntityManagerFactoryBean entityManagerFactory() {
 		LocalEntityManagerFactoryBean emfb = new LocalEntityManagerFactoryBean();
