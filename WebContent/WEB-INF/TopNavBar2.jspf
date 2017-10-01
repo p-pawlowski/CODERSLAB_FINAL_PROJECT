@@ -25,7 +25,7 @@
 
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/KnowlegdeManagementSystem/movies/registration"><span
+				<li><a href="/KnowlegdeManagementSystem/registration"><span
 						class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 				<li><a href="/KnowlegdeManagementSystem/login"><span
 						class="glyphicon glyphicon-log-in"></span> Login</a></li>
