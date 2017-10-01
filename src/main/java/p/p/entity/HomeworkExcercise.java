@@ -9,54 +9,25 @@ import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name = "excercise")
 public class HomeworkExcercise {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long Id;
+	private @Getter @Setter  Long Id;
 
 	@Column(length = 10000)
-	private String title;
+	private @Getter @Setter String title;
 
 	@Column(length = 10000)
-	private String description;
+	private @Getter @Setter String description;
 
 	@NotNull
 	@ManyToOne
-	private Conspectus conspectus;
-
-	public Long getId() {
-		return Id;
-	}
-
-	public void setId(Long id) {
-		Id = id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Conspectus getConspectus() {
-		return conspectus;
-	}
-
-	public void setConspectus(Conspectus conspectus) {
-		this.conspectus = conspectus;
-	}
+	private @Getter @Setter  Conspectus conspectus;
 
 }
